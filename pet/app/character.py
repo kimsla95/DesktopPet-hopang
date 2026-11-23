@@ -23,7 +23,7 @@ class Character:
             except (OSError, ValueError):
                 cfg = {}
         self.name = cfg.get("name", key)
-        self.default_size = cfg.get("default_size", 150)
+        self.default_size = cfg.get("default_size", 100)
         self.messages = cfg.get("messages", {})
         self.paths = {}
         for state, files in cfg.get("images", {}).items():

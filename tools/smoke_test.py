@@ -67,7 +67,7 @@ def run():
     check("alarm reshows pet", pet.isVisible())
 
     dlg = SettingsDialog(app.settings, pet.reset_position)
-    check("dialog rows", dlg.table.rowCount() == 2)
+    check("dialog rows", dlg.table.rowCount() == 3)
     dlg.alarms.append({"time": "15:00", "message": "스트레칭하자!", "enabled": False, "days": [0, 1, 2, 3, 4]})
     dlg.size_spin.setValue(120)
     app.settings.update(dlg.result_settings())
@@ -80,7 +80,7 @@ def run():
     pet.save_position()
     saved = json.load(open(config.settings_path(), encoding="utf-8"))
     check("clamped on screen", saved["pos"][0] > -100 and saved["pos"][1] > -100)
-    check("alarms saved", len(saved["alarms"]) == 3 and saved["size"] == 120)
+    check("alarms saved", len(saved["alarms"]) == 4 and saved["size"] == 120)
     check("restore", config.load()["pos"] == saved["pos"])
 
     app.settings["quiet"] = {"enabled": True, "start": "00:00", "end": "23:59"}

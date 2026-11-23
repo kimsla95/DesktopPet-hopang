@@ -8,12 +8,13 @@ ALL_DAYS = [0, 1, 2, 3, 4, 5, 6]
 
 DEFAULTS = {
     "character": "anpanman",
-    "size": 150,
+    "size": 100,
     "pos": None,
     "roam": False,
     "alarms": [
-        {"time": "12:00", "message": "밥 먹자!", "enabled": True, "days": ALL_DAYS},
-        {"time": "18:00", "message": "퇴근하자!", "enabled": True, "days": ALL_DAYS},
+        {"time": "09:00", "message": "오늘도 화이팅!", "enabled": True, "days": ALL_DAYS},
+        {"time": "11:30", "message": "밥먹자!", "enabled": True, "days": ALL_DAYS},
+        {"time": "18:00", "message": "오늘도 고생했어!", "enabled": True, "days": ALL_DAYS},
     ],
     "cheer": {"enabled": True, "min_minutes": 30, "max_minutes": 120},
     "quiet": {"enabled": True, "start": "22:00", "end": "08:00"},

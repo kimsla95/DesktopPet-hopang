@@ -139,7 +139,7 @@ class SettingsDialog(QDialog):
         self.size_spin.setRange(80, 300)
         self.size_spin.setSingleStep(10)
         self.size_spin.setSuffix(" px")
-        self.size_spin.setValue(int(settings.get("size") or 150))
+        self.size_spin.setValue(int(settings.get("size") or 100))
         reset_btn = QPushButton("위치 초기화")
         reset_btn.clicked.connect(reset_position)
         char_box = QGroupBox("캐릭터")

@@ -1,6 +1,6 @@
 {
   "name": "호빵맨",
-  "default_size": 150,
+  "default_size": 100,
   "images": {
     "idle": "stand.png",
     "walk": ["walk_1.png", "walk_2.png"],
